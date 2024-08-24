@@ -29,7 +29,8 @@ require_once './connect.php';
 
       <div class="wrapper password_wrapper">
         <label for="password">Пароль</label>
-        <div class="password_hide">
+        <div class="password_hide_wrapper">
+          <div class="password_eye password_hide"></div>
           <input
             type="password"
             name="password"
@@ -43,6 +44,8 @@ require_once './connect.php';
       <input type="submit" value="Войти" id="btn" />
     </div>
   </form>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

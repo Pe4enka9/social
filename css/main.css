@@ -31,17 +31,36 @@ form .input_wrapper .wrapper label {
   font-size: 20px;
 }
 form .input_wrapper .wrapper input {
+  width: 250px;
   height: 40px;
   padding-left: 10px;
   border: none;
   border-radius: 8px;
   font-size: 20px;
   outline: none;
+  transition: border 0.1s ease-out;
+}
+form .input_wrapper .wrapper input:focus {
+  border: 2px solid #45a29e;
+}
+form .input_wrapper .wrapper .password_eye {
+  width: 25px;
+  height: 25px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  cursor: pointer;
 }
 form .input_wrapper .wrapper .password_hide {
   background-image: url("../svg/password_hide.svg");
-  background-size: 20px;
-  background-position: 10px;
+}
+form .input_wrapper .wrapper .password_show {
+  background-image: url("../svg/password_show.svg");
+}
+form .input_wrapper .password_wrapper {
+  position: relative;
 }
 form .btn_wrapper {
   margin-top: 20px;
@@ -57,7 +76,7 @@ form .btn_wrapper #btn {
   font-size: 20px;
   outline: none;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease-out;
 }
 form .btn_wrapper #btn:hover {
   color: #0b0c10;
