@@ -31,17 +31,17 @@ form .input_wrapper .wrapper label {
   font-size: 20px;
 }
 form .input_wrapper .wrapper input {
-  width: 250px;
+  width: 100%;
   height: 40px;
   padding-left: 10px;
   border: none;
   border-radius: 8px;
   font-size: 20px;
   outline: none;
-  transition: border 0.1s ease-out;
+  transition: outline 0.1s ease-out;
 }
 form .input_wrapper .wrapper input:focus {
-  border: 2px solid #45a29e;
+  outline: 2px solid #45a29e;
 }
 form .input_wrapper .wrapper .password_eye {
   width: 25px;
@@ -81,4 +81,13 @@ form .btn_wrapper #btn {
 form .btn_wrapper #btn:hover {
   color: #0b0c10;
   background-color: #45a29e;
+}
+form #reg {
+  padding-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+form #reg a {
+  color: #5757df;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */

@@ -43,6 +43,8 @@ require_once './connect.php';
     <div class="btn_wrapper">
       <input type="submit" value="Войти" id="btn" />
     </div>
+
+    <div id="reg">Ещё нет аккаунта? <a href="./pages/register.php">Зарегистрируйся!</a></div id="reg">
   </form>
 
   <script src="./js/main.js"></script>
