@@ -14,3 +14,16 @@ passwordEye.addEventListener("click", () => {
     passwordInput.type = "password";
   }
 });
+
+const form = document.getElementById("form");
+const passwordInputRepeat = document.getElementById("password_repeat");
+
+form.addEventListener("submit", (event) => {
+  if (passwordInput.value !== passwordInputRepeat.value) {
+    const errorPassword = document.querySelector(".error_password");
+
+    event.preventDefault();
+
+    errorPassword.textContent = "Пароли не совпадают!";
+  }
+});

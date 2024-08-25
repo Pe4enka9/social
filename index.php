@@ -1,9 +1,14 @@
 <?php
+session_start();
 require_once './connect.php';
+
+if (isset($_SESSION['user'])) {
+  header('Location: ./pages/profile.php');
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
@@ -31,12 +36,16 @@ require_once './connect.php';
         <label for="password">Пароль</label>
         <div class="password_hide_wrapper">
           <div class="password_eye password_hide"></div>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            autocomplete="off" />
+          <input type="password" name="password" id="password" autocomplete="off" />
         </div>
+        <span class="error error_login_or_password">
+          <?php
+          if (isset($_SESSION['error'])) {
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+          }
+          ?>
+        </span>
       </div>
     </div>
 

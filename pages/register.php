@@ -1,9 +1,14 @@
 <?php
+session_start();
 require_once '../connect.php';
+
+if (isset($_SESSION['user'])) {
+    header('Location: ./profile.php');
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8" />
@@ -18,13 +23,19 @@ require_once '../connect.php';
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="../vendor/create.php" method="post" id="form">
         <h1>Регистрация</h1>
 
         <div class="input_wrapper">
             <div class="wrapper login_wrapper">
                 <label for="login">Логин</label>
                 <input type="text" name="login" id="login" autocomplete="off" />
+                <?php
+                if (isset($_SESSION['errorLogin'])) {
+                    echo $_SESSION['errorLogin'];
+                    unset($_SESSION['errorLogin']);
+                }
+                ?>
             </div>
 
             <div class="wrapper lastName_wrapper">
@@ -46,21 +57,14 @@ require_once '../connect.php';
                 <label for="password">Пароль</label>
                 <div class="password_hide_wrapper">
                     <div class="password_eye password_hide"></div>
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        autocomplete="off" />
+                    <input type="password" name="password" id="password" autocomplete="off" />
                 </div>
             </div>
 
-            <div class="wrapper password_wrapper">
-                <label for="password">Повторите пароль</label>
-                <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    autocomplete="off" />
+            <div class="wrapper password_repeat_wrapper">
+                <label for="password_repeat">Повторите пароль</label>
+                <input type="password" id="password_repeat" autocomplete="off" />
+                <span class="error error_password"></span>
             </div>
         </div>
 
@@ -71,7 +75,7 @@ require_once '../connect.php';
         <div id="reg">Уже есть аккаунт? <a href="/">Авторизуйся!</a></div id="reg">
     </form>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 
 </html>
