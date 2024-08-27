@@ -19,7 +19,7 @@ try {
         'surname' => $surname
     ]);
 } catch (PDOException $e) {
-    $_SESSION['errorLogin'] = '<div class="error error_login">Пользователь с таким логином уже существует!</div>';
+    $_SESSION['errorLogin'] = '<span class="error error_login">Пользователь с таким логином уже существует!</span>';
 
     header('Location: ../pages/register.php');
 }

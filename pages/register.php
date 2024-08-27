@@ -36,16 +36,19 @@ if (isset($_SESSION['user'])) {
                     unset($_SESSION['errorLogin']);
                 }
                 ?>
+                <span class="error error_login_length"></span>
             </div>
 
             <div class="wrapper lastName_wrapper">
                 <label for="lastName">Фамилия</label>
                 <input type="text" name="lastName" id="lastName">
+                <span class="error error_lastName_length"></span>
             </div>
 
             <div class="wrapper name_wrapper">
                 <label for="name">Имя</label>
                 <input type="text" name="name" id="name">
+                <span class="error error_name_length"></span>
             </div>
 
             <div class="wrapper surname_wrapper">

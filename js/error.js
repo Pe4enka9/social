@@ -1,4 +1,6 @@
 const loginInput = document.getElementById("login");
-const error = document.querySelector(".error");
+const error = document.querySelectorAll(".error");
 
-error.style.width = loginInput.clientWidth + "px";
+error.forEach((err) => {
+  err.style.width = loginInput.clientWidth + "px";
+});
