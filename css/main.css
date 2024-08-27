@@ -63,6 +63,7 @@ form .input_wrapper .wrapper .password_show {
   background-image: url("../svg/password_show.svg");
 }
 form .input_wrapper .wrapper .error {
+  width: 1px;
   padding-top: 5px;
   color: #dc3545;
 }

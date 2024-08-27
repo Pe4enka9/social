@@ -76,6 +76,7 @@ if (isset($_SESSION['user'])) {
     </form>
 
     <script src="../js/register.js"></script>
+    <script src="../js/error.js"></script>
 </body>
 
 </html>
