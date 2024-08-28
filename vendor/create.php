@@ -2,10 +2,10 @@
 session_start();
 require_once '../connect.php';
 
-$login = $_POST['login'];
+$login = trim($_POST['login']);
+$lastName = trim($_POST['lastName']);
+$name = trim($_POST['name']);
 $password = md5($_POST['password']);
-$lastName = $_POST['lastName'];
-$name = $_POST['name'];
 
 try {
     $sql = "INSERT INTO `user` (`id`, `login`, `password`, `lastName`, `name`) VALUES (NULL, :login, :password, :lastName, :name)";

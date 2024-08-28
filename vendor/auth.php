@@ -2,7 +2,7 @@
 session_start();
 require_once '../connect.php';
 
-$login = $_POST['login'];
+$login = trim($_POST['login']);
 $password = md5($_POST['password']);
 
 $sql = "SELECT * FROM `user` WHERE BINARY `login` = :login AND BINARY `password` = :password";
