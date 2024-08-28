@@ -51,11 +51,6 @@ if (isset($_SESSION['user'])) {
                 <span class="error error_name_length"></span>
             </div>
 
-            <div class="wrapper surname_wrapper">
-                <label for="surname">Отчество (если есть)</label>
-                <input type="text" name="surname" id="surname">
-            </div>
-
             <div class="wrapper password_wrapper">
                 <label for="password">Пароль</label>
                 <div class="password_hide_wrapper">
