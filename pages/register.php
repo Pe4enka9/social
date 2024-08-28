@@ -41,13 +41,13 @@ if (isset($_SESSION['user'])) {
 
             <div class="wrapper lastName_wrapper">
                 <label for="lastName">Фамилия</label>
-                <input type="text" name="lastName" id="lastName">
+                <input type="text" name="lastName" id="lastName" autocomplete="off">
                 <span class="error error_lastName_length"></span>
             </div>
 
             <div class="wrapper name_wrapper">
                 <label for="name">Имя</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" autocomplete="off">
                 <span class="error error_name_length"></span>
             </div>
 
@@ -57,12 +57,13 @@ if (isset($_SESSION['user'])) {
                     <div class="password_eye password_hide"></div>
                     <input type="password" name="password" id="password" autocomplete="off" />
                 </div>
+                <span class="error error_password"></span>
             </div>
 
             <div class="wrapper password_repeat_wrapper">
                 <label for="password_repeat">Повторите пароль</label>
                 <input type="password" id="password_repeat" autocomplete="off" />
-                <span class="error error_password"></span>
+                <span class="error error_password_repeat"></span>
             </div>
         </div>
 
